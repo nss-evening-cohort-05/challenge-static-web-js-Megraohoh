@@ -1,3 +1,24 @@
+function treeStacker (){
+//capture user input	
+	var treeHeight = document.getElementById('height').value;
+	var treeCharacter = document.getElementById('character').value;
+
+//math needed to stack tree
+// to print spaces use treeHeight - (i + 1)
+// to print characters use (2 * i) + 1
+
+	var treeArray = [ ];
+
+for (var i = 0; i < treeArray.length; i++){
+
+	var treeHeight = treeHeight - (i + 1);
+	var treeCharacter = treeCharacter (2 * i) + 1;
+
+	}
+console.log(treeArray);
+}
+
+
 // Create a tree function that should build a pine tree out of a character 
 // in the Chrome dev tools console.
 

@@ -1,3 +1,9 @@
+
+// ADD GROW BUTTON
+var button = document.getElementById("grow");
+button.addEventListener("click", treeStacker);
+
+
 function treeStacker (){
 //capture user input	
 	var treeHeight = document.getElementById('height').value;
@@ -16,6 +22,8 @@ for (var i = 0; i < treeArray.length; i++){
 
 	}
 console.log(treeArray);
+
+return treeArray;
 }
 
 

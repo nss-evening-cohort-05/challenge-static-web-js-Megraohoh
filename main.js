@@ -1,32 +1,61 @@
-
 // ADD GROW BUTTON
-var button = document.getElementById("grow");
-button.addEventListener("click", treeStacker);
 
+//ADD USER INPUT FUNCTION
 
-function treeStacker (){
-//capture user input	
+function userInput (){
+	//capture user input
+
 	var treeHeight = document.getElementById('height').value;
 	var treeChar = document.getElementById('character').value;
 
-//math needed to stack tree
-// to print spaces use treeHeight - (i + 1)
-// to print characters use (2 * i) + 1
+		for (var i = 0; i < treeHeight.length; i++){
 
-	var newTreeArray = [ height, character];
+			var treeHeight = treeHeight - (i + 1);
+			var treeChar = treeChar * (2 * i) + 1;
 
-for (var i = 0; i < newTreeArray.length; i++){
+			}
 
-	var treeHeight = treeHeight - (i + 1);
-	var treeChar = treeChar (2 * i) + 1;
 
-	}
+	var button = document.getElementById("grow");
+	button.addEventListener("click", treeStacker);
 
-	//grab input and put into array
+	document.onclick = function(treeStacker){
+	 alert("clicked");
+
+
+	 if (treeHeight === []) {
+	 	alert("Give me a height!")
+	 }
+
+	 if (treeChar === []) {
+	 	alert("Give me a character!")
+	 }
+	
+
+function treeStacker (){
+// //capture user input	
+	// var treeHeight = document.getElementById('height').value;
+	// var treeChar = document.getElementById('character').value;
+
+	// 	for (var i = 0; i < treeHeight.length; i++){
+
+	// 		var treeHeight = treeHeight - (i + 1);
+	// 		var treeChar = treeChar * (2 * i) + 1;
+
+	// 		}
+
+var newTreeArray = [ height, character];
+//grab input and put into array
+
+// return newTreeArray;
+	
 console.log(newTreeArray);
 
-return newTreeArray;
+		}
+	}
 }
+
+
 
 
 // Create a tree function that should build a pine tree out of a character 

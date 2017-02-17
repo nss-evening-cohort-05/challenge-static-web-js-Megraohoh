@@ -7,23 +7,25 @@ button.addEventListener("click", treeStacker);
 function treeStacker (){
 //capture user input	
 	var treeHeight = document.getElementById('height').value;
-	var treeCharacter = document.getElementById('character').value;
+	var treeChar = document.getElementById('character').value;
 
 //math needed to stack tree
 // to print spaces use treeHeight - (i + 1)
 // to print characters use (2 * i) + 1
 
-	var treeArray = [ ];
+	var newTreeArray = [ height, character];
 
-for (var i = 0; i < treeArray.length; i++){
+for (var i = 0; i < newTreeArray.length; i++){
 
 	var treeHeight = treeHeight - (i + 1);
-	var treeCharacter = treeCharacter (2 * i) + 1;
+	var treeChar = treeChar (2 * i) + 1;
 
 	}
-console.log(treeArray);
 
-return treeArray;
+	//grab input and put into array
+console.log(newTreeArray);
+
+return newTreeArray;
 }
 
 

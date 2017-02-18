@@ -15,16 +15,9 @@ function inputValidation(){
 
 	 if (treeHeight === '') {		//if used bundle only and not two steps, would read as treeObject.treeHeight
 	 	alert("Give me a height!")
-	 }
-
-	 else if (treeHeight != '') {
-	 	treeStacker (treeObject);
-	 }
-
-	 if (treeChar === '') {
+	 } else if (treeChar === '') {
 	 	alert("Give me a character!")
-	 }
-	 else if (treeChar != '') {
+	 } else  {
 	 	treeStacker (treeObject);
 	 }
  }

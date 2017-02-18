@@ -2,6 +2,11 @@
 var input = document.getElementById("input");
 var button = document.getElementById("grow");
 button.addEventListener("click", inputValidation);
+document.getElementById('input').addEventListener("keyup",  function(e){
+  if(e.keyCode == 13){
+  	inputValidation();
+  }
+});
 	
 function inputValidation(){
 

@@ -20,7 +20,21 @@ function inputValidation(){
 	 } else  {
 	 	treeStacker (treeObject);
 	 }
- }
+
+
+// 	 if (treeChar === '' && treeHeight === '') {
+// 	 	alert("You gave me nothing to work with so you get no tree...biotch.")
+// 	 } else if (treeChar === '') {
+// 	 	alert("Give me a character!")  
+// 	 } else if (treeHeight === '') {
+// 	 	alert("Give me a height!")
+// 	 } else  {
+// 	 	treeStacker (treeObject);
+// 	 }
+
+}
+
+ 
 
 var treeStacker = function(treeObject){
 	console.log(treeObject)

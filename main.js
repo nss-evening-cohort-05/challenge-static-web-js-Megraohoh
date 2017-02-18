@@ -1,87 +1,43 @@
-// ADD GROW BUTTON
 
-//ADD USER INPUT FUNCTION
-
-function userInput (){
-	//capture user input
+var input = document.getElementById("input");
+var button = document.getElementById("grow");
+button.addEventListener("click", inputValidation);
+	
+function inputValidation(){
 
 	var treeHeight = document.getElementById('height').value;
 	var treeChar = document.getElementById('character').value;
 
-		for (var i = 0; i < treeHeight.length; i++){
+	var treeObject = { 				//bundles the values
+		treeHeight: treeHeight,		//could write as treeHeight: document.getElementById('height').value; rather than have 2 steps
+		treeChar: treeChar			//could write as treeChar: document.getElementById('char').value; rather than have 2 steps
+	}
 
-			var treeHeight = treeHeight - (i + 1);
-			var treeChar = treeChar * (2 * i) + 1;
-
-			}
-
-
-	var button = document.getElementById("grow");
-	button.addEventListener("click", treeStacker);
-
-	document.onclick = function(treeStacker){
-	 alert("clicked");
-
-
-	 if (treeHeight === []) {
+	 if (treeHeight === '') {		//if used bundle only and not two steps, would read as treeObject.treeHeight
 	 	alert("Give me a height!")
 	 }
 
-	 if (treeChar === []) {
+	 else if (treeHeight != '') {
+	 	treeStacker (treeObject);
+	 }
+
+	 if (treeChar === '') {
 	 	alert("Give me a character!")
 	 }
-	
+	 else if (treeChar != '') {
+	 	treeStacker (treeObject);
+	 }
+ }
 
-function treeStacker (){
-// //capture user input	
-	// var treeHeight = document.getElementById('height').value;
-	// var treeChar = document.getElementById('character').value;
+var treeStacker = function(treeObject){
+	console.log(treeObject)
 
-	// 	for (var i = 0; i < treeHeight.length; i++){
+		for (var i = 0; i < treeObject.treeHeight; i++) {  //<--benefits of using bundled object rather than passing in multiple thingys
 
-	// 		var treeHeight = treeHeight - (i + 1);
-	// 		var treeChar = treeChar * (2 * i) + 1;
-
-	// 		}
-
-var newTreeArray = [ height, character];
-//grab input and put into array
-
-// return newTreeArray;
-	
-console.log(newTreeArray);
-
+			var numOfSpaces = treeObject.treeHeight - (i + 1);
+			var numOfChar = (2 * i) + 1;
+			console.log(" ".repeat(numOfSpaces) + treeObject.treeChar.repeat(numOfChar))  //character is dynamic, so needs more code to clarify (coming in the bundle)
+			//this console.log includes STRING METHODS...remember what those are you asshat
 		}
-	}
-}
+};
 
-
-
-
-// Create a tree function that should build a pine tree out of a character 
-// in the Chrome dev tools console.
-
-// It accepts a single object as an argument. The object should have two 
-// key/value pairs.
-
-// A key that specifies the height of the pine tree.
-
-// The value for the height of the tree should be from user input in a 
-// <input type="text"> field in the DOM.
-
-// A key that specifies which character to use to build the pine tree.
-// The character to use should be from user input in a <input type="text"> 
-// field in the DOM.
-
-// Once the user enters in a number, and a character, the user can either 
-// then just press the enter key (as long as the cursor is in one of the 
-// 	input fields), or click a button that is labeled "Grow your tree" 
-// and the tree should be shown in the console. This requires you to add 
-// an event listener to the button, as well as an event listener for the 
-// enter/return key.
-
-// If either of the input fields does not have a value in it when the user 
-// presses the enter key, or presses the button, then display an alert 
-// stating that both fields must have a value.
-
-// Grow your tree
